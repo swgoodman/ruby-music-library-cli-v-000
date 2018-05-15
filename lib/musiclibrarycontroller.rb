@@ -22,9 +22,8 @@ class MusicLibraryController
     input = gets.chomp.downcase
 
     4.times do
-
-    input
-      end
+        gets
+    end
 
 
 
