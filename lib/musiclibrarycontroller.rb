@@ -18,10 +18,12 @@ class MusicLibraryController
     puts "To play a song, enter 'play song'."
     puts "To quit, type 'exit'."
 
+    input = gets.chomp.downcase
+
     4.times do
     puts "What would you like to do?"
-    input = gets.chomp.downcase
-  end
+    input
+      end
 
 
 
