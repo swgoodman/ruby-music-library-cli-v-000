@@ -5,6 +5,7 @@ class MusicLibraryController
 
   def initialize(path)
     @import_time = MusicImporter.new(path)
+    @import_time.import
   end
 
 
