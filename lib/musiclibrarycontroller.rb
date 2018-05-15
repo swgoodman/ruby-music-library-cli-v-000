@@ -1,11 +1,10 @@
 
 class MusicLibraryController
 
-  attr_accessor :path
+  attr_accessor :import_time
 
   def initialize(path)
-    @path = path
-    MusicImporter.new(path)
+    @import_time = MusicImporter.new(path)
   end
 
 
