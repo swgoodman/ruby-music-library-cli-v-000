@@ -19,8 +19,13 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
 
-    4.times do input = gets
+    4.times do input = gets.chomp.downcase
     end
+
+    case input
+      when input == "list songs"
+        Songs.all.each_with_index {|song, index| puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
+
 
 
 
