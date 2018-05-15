@@ -20,9 +20,11 @@ class MusicLibraryController
     puts "What would you like to do?"
 
     input = gets.chomp.downcase
+    input = gets.chomp.downcase
+    input = gets.chomp.downcase
+    input = gets.chomp.downcase
 
-    4.times do input
-    end
+
 
     case input
       when input == "list songs"
