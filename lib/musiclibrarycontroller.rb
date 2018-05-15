@@ -38,5 +38,8 @@ class MusicLibraryController
       alpha.each_with_index {|genre, index| puts "#{index+1}. #{genre.name}"}
     end
 
+    def list_songs_by_artist
+      input = gets.chomp
+
   end
 end
