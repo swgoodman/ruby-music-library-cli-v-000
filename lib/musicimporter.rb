@@ -13,6 +13,7 @@ class MusicImporter
 
   def import
     @files.each { |song| song.create_from_filename}
+    binding.pry
   end
 
 end
