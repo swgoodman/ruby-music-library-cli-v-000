@@ -1,5 +1,5 @@
 
-def MusicLibraryController
+class MusicLibraryController
 
   attr_accessor :path
 
