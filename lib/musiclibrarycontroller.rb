@@ -39,11 +39,13 @@ class MusicLibraryController
     end
 
     def list_songs_by_artist
-      input = gets.chomp
-      puts "Please enter the name of an artist:"
-      artist = Artist.find_by_name(input)
-      artist.songs.each_with_index {|song, index| puts "#{index}. #{artist.song.name} - #{artist.song.genre}"}
-      binding.pry
+      puts "Enter artist"
+      specific_artist = gets.chomp
+      if Artist.find_by_name(specific_artist) != nil
+        Artist.find_by_name(specific_artist).songs.each {|song| puts "#{song.artist.name} - #{song.name} - #{song.genre.name}"}
+      else
+        puts "Artist does not exist"
+      end 
     end
 
   end
