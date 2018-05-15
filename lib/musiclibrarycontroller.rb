@@ -23,19 +23,10 @@ class MusicLibraryController
         gets
     end
 
+    def list_songs
+      Songs.all.each_with_index {|song, index| puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
+    end
 
-
-    case input
-      when input == "list songs"
-        Songs.all.each_with_index {|song, index| puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
-
-
-      end
-
-
-
+    end
   end
-
-
-
 end
