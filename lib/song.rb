@@ -50,7 +50,7 @@ class Song
 
   def self.create_from_filename(name)
     self.new_from_filename(name)
-    self.create(parse_song, artist, genre)
+    self.create(name, artist, genre)
 
   end
 
