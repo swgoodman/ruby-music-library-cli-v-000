@@ -21,9 +21,7 @@ class MusicLibraryController
     puts "What would you like to do?"
 
   command = gets.chomp.downcase
-  command = gets.chomp.downcase
-  command = gets.chomp.downcase
-  command = gets.chomp.downcase
+
 
   if command == "list songs"
     list songs
