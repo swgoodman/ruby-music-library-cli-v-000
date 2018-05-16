@@ -2,7 +2,7 @@
 class MusicLibraryController
   extend Concerns::Findable
 
-  attr_accessor :import_time, :alpha
+  attr_accessor :import_time
   @@alpha = Song.all.sort_by! {|song| song.name}
 
   def initialize(path="./db/mp3s")
