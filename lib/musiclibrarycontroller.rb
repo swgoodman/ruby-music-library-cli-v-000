@@ -67,6 +67,7 @@ class MusicLibraryController
         puts "Playing #{file_name.name} by #{file_name.artist.name}"
       else
       end
+      binding.pry
     end
 
   end
