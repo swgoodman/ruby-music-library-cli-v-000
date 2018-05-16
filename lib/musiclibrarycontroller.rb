@@ -59,9 +59,8 @@ class MusicLibraryController
 
     def play_song
       puts "Which song number would you like to play?"
-      list_songs
-      song = list_songs[gets.to_i - 1]
-
+      song = gets.chomp.to_i
+      file_name = Song.all[song - 1]
       puts "Playing #{song.name} by #{song.artist}"
     end
 
