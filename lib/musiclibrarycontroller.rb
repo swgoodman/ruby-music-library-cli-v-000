@@ -35,8 +35,9 @@ class MusicLibraryController
         list_songs_by_genre
       else
         puts "invalid action"
+        binding.pry
     end
-    binding.pry
+
 end
 
 
