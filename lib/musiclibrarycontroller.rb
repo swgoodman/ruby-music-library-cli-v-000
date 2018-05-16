@@ -20,6 +20,7 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
 
+    input = ""
     4.times do
       input = gets.chomp.downcase
     end
