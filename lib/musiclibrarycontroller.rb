@@ -20,12 +20,12 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
 
-  command = gets.chomp.downcase until command == "exit"
-
-  case command
-  when "list songs"
-    list songs
-  end
+    command = gets.chomp.downcase until command == "exit"
+binding.pry
+    case command
+      when "list songs"
+        list songs
+    end
 end
 
 
