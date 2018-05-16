@@ -21,7 +21,10 @@ class MusicLibraryController
     puts "What would you like to do?"
 
   command = 4.times do gets.chomp.downcase
-  end
+    end
+
+  when command = "list songs"
+    list_songs
 
 
   end
