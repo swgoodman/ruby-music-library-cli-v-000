@@ -21,10 +21,12 @@ class MusicLibraryController
     puts "What would you like to do?"
 
     4.times do
-        gets
+        gets.chomp.downcase
     end
 
-
+  when gets = "list songs"
+    list_songs
+  end
   end
 
     def list_songs
