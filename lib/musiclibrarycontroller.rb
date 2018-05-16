@@ -26,10 +26,9 @@ class MusicLibraryController
   command = gets.chomp.downcase
 
   case command
-    when command = "list songs"
+    when "list songs"
       list_songs
-
-  end
+    end
 end
 
 
