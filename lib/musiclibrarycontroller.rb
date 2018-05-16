@@ -63,7 +63,7 @@ class MusicLibraryController
       song = gets.chomp.to_i
       alpha = Song.all.sort_by! {|song| song.name}
       file_name = alpha[song - 1]
-      puts "Playing #{file_name.name} by #{file_name.artist}"
+      puts "Playing #{file_name.name} by #{file_name.artist.name}"
     end
 
   end
