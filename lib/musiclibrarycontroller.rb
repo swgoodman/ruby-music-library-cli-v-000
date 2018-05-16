@@ -28,9 +28,6 @@ class MusicLibraryController
   if command == "list songs"
     list songs
   end
-
-  end
-  binding.pry
 end
 
 
