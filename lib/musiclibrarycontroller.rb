@@ -9,7 +9,6 @@ class MusicLibraryController
     @import_time.import
   end
 
-  
   def call
 
     puts "Welcome to your music library!"
