@@ -27,9 +27,9 @@ class MusicLibraryController
       command = gets.chomp
       case command
         when "list songs"
-          list songs
+          list_songs
         when "list artists"
-          list artists
+          list_artists
         when "list genres"
           list_genres
         when "list artist"
