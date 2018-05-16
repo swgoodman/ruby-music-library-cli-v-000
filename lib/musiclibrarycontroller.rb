@@ -62,7 +62,6 @@ class MusicLibraryController
       puts "Which song number would you like to play?"
       song = gets.chomp.to_i
       file_name = @@alpha[song - 1]
-      binding.pry
       puts "Playing #{file_name.name} by #{file_name.artist}"
     end
 
