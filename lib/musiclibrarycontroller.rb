@@ -29,8 +29,12 @@ class MusicLibraryController
     when command = "list songs"
       list_songs
     end
-
-
+  when command = "list songs"
+    list_songs
+  end
+  when command = "list songs"
+    list_songs
+  end
   end
 
 
