@@ -62,9 +62,9 @@ class MusicLibraryController
       song = gets.chomp.to_i
       alpha = Song.all.sort_by! {|song| song.name}
       total = alpha.length
-      if file_name = alpha[song - 1] && song.between?(1, total)
+      if file_name = alpha[song - 1]
         puts "Playing #{file_name.name} by #{file_name.artist.name}"
-      else 
+      else song.between?(1, total) == false
       end
     end
 
