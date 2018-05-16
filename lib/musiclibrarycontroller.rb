@@ -22,8 +22,8 @@ class MusicLibraryController
 
   command = gets.chomp.downcase until command == "exit"
 
-
-  if command == "list songs"
+  case command
+  when "list songs"
     list songs
   end
 end
