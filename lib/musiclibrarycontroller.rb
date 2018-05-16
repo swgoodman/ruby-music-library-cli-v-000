@@ -22,9 +22,10 @@ class MusicLibraryController
 
   command = 4.times do gets.chomp.downcase
     end
-
-  when command = "list songs"
-    list_songs
+  case command
+    when command = "list songs"
+      list_songs
+    end
 
 
   end
