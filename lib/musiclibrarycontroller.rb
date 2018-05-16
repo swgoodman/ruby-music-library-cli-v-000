@@ -34,48 +34,48 @@ end
 
 
 
-    def list_songs
-      alpha = Song.all.sort_by! {|song| song.name}
-      alpha.each_with_index {|song, index| puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
-    end
+  def list_songs
+    alpha = Song.all.sort_by! {|song| song.name}
+    alpha.each_with_index {|song, index| puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
+  end
 
-    def list_artists
-      alpha = Artist.all.sort_by! {|artist| artist.name}
-      alpha.each_with_index {|artist, index| puts "#{index+1}. #{artist.name}"}
-    end
+  def list_artists
+    alpha = Artist.all.sort_by! {|artist| artist.name}
+    alpha.each_with_index {|artist, index| puts "#{index+1}. #{artist.name}"}
+  end
 
-    def list_genres
-      alpha = Genre.all.sort_by! {|genre| genre.name}
-      alpha.each_with_index {|genre, index| puts "#{index+1}. #{genre.name}"}
-    end
+  def list_genres
+    alpha = Genre.all.sort_by! {|genre| genre.name}
+    alpha.each_with_index {|genre, index| puts "#{index+1}. #{genre.name}"}
+  end
 
-    def list_songs_by_artist
-      puts "Please enter the name of an artist:"
-      specific_artist = gets.chomp
-      if Artist.find_by_name(specific_artist) != nil
-        sorted = Artist.find_by_name(specific_artist).songs.sort_by! {|song| song.name}
-        sorted.each_with_index {|song, index| puts "#{index+1}. #{song.name} - #{song.genre.name}"}.sort_by! {|song| song.name}
-      end
+  def list_songs_by_artist
+    puts "Please enter the name of an artist:"
+    specific_artist = gets.chomp
+    if Artist.find_by_name(specific_artist) != nil
+      sorted = Artist.find_by_name(specific_artist).songs.sort_by! {|song| song.name}
+      sorted.each_with_index {|song, index| puts "#{index+1}. #{song.name} - #{song.genre.name}"}.sort_by! {|song| song.name}
     end
+  end
 
-    def list_songs_by_genre
-      puts "Please enter the name of a genre:"
-      specific_genre = gets.chomp
-      if Genre.find_by_name(specific_genre) != nil
-        sorted = Genre.find_by_name(specific_genre).songs.sort_by! {|genre| genre.name}
-        sorted.each_with_index {|song, index| puts "#{index+1}. #{song.artist.name} - #{song.name}"}
-      end
+  def list_songs_by_genre
+    puts "Please enter the name of a genre:"
+    specific_genre = gets.chomp
+    if Genre.find_by_name(specific_genre) != nil
+      sorted = Genre.find_by_name(specific_genre).songs.sort_by! {|genre| genre.name}
+      sorted.each_with_index {|song, index| puts "#{index+1}. #{song.artist.name} - #{song.name}"}
     end
+  end
 
-    def play_song
-      puts "Which song number would you like to play?"
-      song = gets.chomp.to_i
-      alpha = Song.all.sort_by! {|song| song.name}
-      total = alpha.length
-      file_name = alpha[song - 1]
+  def play_song
+    puts "Which song number would you like to play?"
+    song = gets.chomp.to_i
+    alpha = Song.all.sort_by! {|song| song.name}
+    total = alpha.length
+    file_name = alpha[song - 1]
       if song.between?(1, total)
         puts "Playing #{file_name.name} by #{file_name.artist.name}"
       else
       end
-    end
+  end
 end
