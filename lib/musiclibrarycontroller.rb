@@ -20,7 +20,9 @@ class MusicLibraryController
     puts "To quit, type 'exit'."
     puts "What would you like to do?"
 
-    command = gets.chomp.downcase until command == "exit"
+    command = ""
+    until command == "exit"
+      command = gets.chomp.downcase
 
     case command
       when "list songs"
@@ -36,6 +38,7 @@ class MusicLibraryController
       else
         puts "invalid action"
     end
+  end
 
 end
 
