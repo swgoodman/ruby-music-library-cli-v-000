@@ -61,8 +61,8 @@ class MusicLibraryController
       puts "Which song number would you like to play?"
       list_songs
       song = list_songs[gets.to_i - 1]
-      
-      puts "Playing #{song.name} by #{song.name.artist}"
+
+      puts "Playing #{song.name} by #{song.artist}"
     end
 
   end
