@@ -28,8 +28,9 @@ class MusicLibraryController
   case command
   when "list songs"
     hey = list_songs
-    binding.pry
+
   end
+  binding.pry
 end
 
 
