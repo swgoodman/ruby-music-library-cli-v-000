@@ -21,7 +21,7 @@ class MusicLibraryController
     puts "What would you like to do?"
 
     command = gets.chomp.downcase until command == "exit"
-binding.pry
+
     case command
       when "list songs"
         list songs
