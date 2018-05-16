@@ -25,9 +25,9 @@ class MusicLibraryController
   command = gets.chomp.downcase
   command = gets.chomp.downcase
 
-  case command
-  when "list songs"
-    hey = list_songs
+  if command == "list songs"
+    list songs
+  end
 
   end
   binding.pry
