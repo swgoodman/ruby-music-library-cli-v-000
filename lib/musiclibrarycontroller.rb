@@ -60,7 +60,7 @@ class MusicLibraryController
     def play_song
       puts "Which song number would you like to play?"
       song = Song.all[gets.to_i - 1]
-      spin = song.to_s
+      spin = song
       puts "Playing #{Song.all[spin]} by #{Song.all[spin.artist.name]}"
     end
 
