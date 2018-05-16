@@ -23,7 +23,6 @@ class MusicLibraryController
     command = gets.chomp.downcase until command == "exit"
 
     case command
-      binding.pry
       when "list songs"
         list songs
       when "list artists"
