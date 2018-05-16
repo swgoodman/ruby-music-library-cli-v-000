@@ -43,7 +43,9 @@ class MusicLibraryController
       puts "Please enter the name of an artist:"
       specific_artist = gets.chomp
       binding.pry
-        #Artist.find_by_name(specific_artist).songs.each {|song| puts "#{song.artist.name} - #{song.name} - #{song.genre.name}"}
+      if Artist.find_by_name(specific_artist) != nil
+        Artist.find_by_name(specific_artist) != nil.songs.each {|song| puts "#{song.artist.name} - #{song.name} - #{song.genre.name}"}
+      end
     end
 
   end
