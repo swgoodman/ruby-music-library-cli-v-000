@@ -26,8 +26,8 @@ class MusicLibraryController
     list_songs
   end
 
-  end
-end
+  
+
 
     def list_songs
       alpha = Song.all.sort_by! {|song| song.name}
