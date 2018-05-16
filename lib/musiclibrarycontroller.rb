@@ -28,14 +28,14 @@ class MusicLibraryController
   case command
     when command = "list songs"
       list_songs
-    end
+
+  when command = "list songs"
+    list_songs
+
   when command = "list songs"
     list_songs
   end
-  when command = "list songs"
-    list_songs
-  end
-  end
+end
 
 
 
