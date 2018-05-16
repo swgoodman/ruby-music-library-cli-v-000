@@ -36,6 +36,7 @@ class MusicLibraryController
       else
         puts "invalid action"
     end
+    binding.pry
 end
 
 
