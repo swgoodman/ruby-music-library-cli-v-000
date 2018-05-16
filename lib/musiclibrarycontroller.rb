@@ -24,43 +24,22 @@ class MusicLibraryController
         gets
     end
 
-         until input == "exit"
-       input = gets.chomp
-       case input
-       when "list songs"
-         list_songs
-       when "list artists"
-         list_artists
-       when "list genres"
-        list_genres
-       when "play song"
-         play_song
-      when "list artist"
-         list_artist
-       when "list genre"
-         list_genre
-       when "exit"
-         puts "Goodbye"
-       else
-         puts "invalid action"
-       end
-     end
 
   end
 
     def list_songs
       alpha = Song.all.sort_by! {|song| song.name}
-      alpha.each_with_index {|song, index| puts "#{index 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
+      alpha.each_with_index {|song, index| puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
     end
 
     def list_artists
       alpha = Artist.all.sort_by! {|artist| artist.name}
-      alpha.each_with_index {|artist, index| puts "#{index 1}. #{artist.name}"}
+      alpha.each_with_index {|artist, index| puts "#{index+1}. #{artist.name}"}
     end
 
     def list_genres
       alpha = Genre.all.sort_by! {|genre| genre.name}
-      alpha.each_with_index {|genre, index| puts "#{index 1}. #{genre.name}"}
+      alpha.each_with_index {|genre, index| puts "#{index+1}. #{genre.name}"}
     end
 
     def list_songs_by_artist
@@ -68,7 +47,7 @@ class MusicLibraryController
       specific_artist = gets.chomp
       if Artist.find_by_name(specific_artist) != nil
         sorted = Artist.find_by_name(specific_artist).songs.sort_by! {|song| song.name}
-        sorted.each_with_index {|song, index| puts "#{index 1}. #{song.name} - #{song.genre.name}"}.sort_by! {|song| song.name}
+        sorted.each_with_index {|song, index| puts "#{index+1}. #{song.name} - #{song.genre.name}"}.sort_by! {|song| song.name}
       end
     end
 
@@ -77,7 +56,7 @@ class MusicLibraryController
       specific_genre = gets.chomp
       if Genre.find_by_name(specific_genre) != nil
         sorted = Genre.find_by_name(specific_genre).songs.sort_by! {|genre| genre.name}
-        sorted.each_with_index {|song, index| puts "#{index 1}. #{song.artist.name} - #{song.name}"}
+        sorted.each_with_index {|song, index| puts "#{index+1}. #{song.artist.name} - #{song.name}"}
       end
     end
 
