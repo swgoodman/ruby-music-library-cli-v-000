@@ -61,7 +61,7 @@ class MusicLibraryController
       puts "Which song number would you like to play?"
       song = gets.chomp.to_i
       file_name = Song.all[song - 1]
-      puts "Playing #{song.name} by #{song.artist}"
+      puts "Playing #{file_name.name} by #{file_name.artist}"
     end
 
   end
